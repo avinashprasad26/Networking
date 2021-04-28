@@ -1,0 +1,126 @@
+											
+											
+											USN  :-  1KS18CS008,1KS17CS012
+											NAME :-  AVINASH PRASAD,ARITRA RAY 
+											
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+INSTRUCTION ON HOW TO EXECUTE THE PROGRAM WITH EXAMPLE :-
+					
+					FIRST WE HAVE TO GIVE "python PROGRAM_NAME.py" AFTER THAN WE HAVE TO SPECIFY "-f MAIL FROM" " -d RECIPENT TO" " -i TEXT FILE" AND AT LAST "-s SERVER IP ADDRESS". WE CAN SEND MANY MAIL RECIPENT AND FILES AT A SAME TIME. BELOW IS THE EXAMPLE :-
+	
+			python3 G02.py -f karthk@ksit.edu.in -d shadowavip@localhost,avinash@ksit.edu.in -i assignment.txt,body.txt -s 127.0.0.1	
+			
+	* NOTE :- WE HAVE TO CREATE FILE.txt SEPARATELY IN THE SAME FOLDER WHERE OUR PROGRAM G02.py IS KEPT OTHERWISE IT WILL SHOW ERROR THAT FILE IS NOT FOUND. 
+	
+ 	* IF YOU TRY TO GIVE LESS OR MORE COMMAND LINE ARGUMENTS IT WILL PRINT " given error arguments in command " 							
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+DESCRIPTION OF HOW THE PROGRAM WORKS :-
+
+					IN THIS CLIENT PROGRAM FIRST I HAVE CREATED SOCKET THEN I HAVE CONNECTED IT TO THE SERVER IP ADDRESS WHICH IS SPECIFIED IN THE COMMAND LINE ARGUMENTS.THEN FROM  SERVER SIDE IT SEND ME THE ACKNOWLEDGMENT. AFTER THEN I SEND THE "EHLO COMMAND WITH WEBSITE" BY USING "SEND" COMMAND,AGAIN ACKNOWLEDGMENT CAME.I HAVE SENT "MAIL FROM" COMMAND AND "RECIPENT TO" COMMAND,AKNOWLEDGMENT CAME FOR BOTH,THEN DATA COMMAND IS SEND .AFTER "DATA" COMMAND THE ACTUAL DATA WE HAVE TO SEND,AGAIN ACKNOWLEDGMENT IS COME.AT LAST DOT(.) COMMAND THEN "QUIT" COMMAND IS SENT,WE GOT THE ACKNOWLEDGMENT FROM SERVER SIDE.AT THE END WE CLOSE THE CONNECTION BY CLOSE COMMAND. 
+					
+					
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CHALLENGES/ISSUES THAT FACES WHILE WRITING SUCH PROGRAM :-
+
+							1). THE FIRST CHALLENGE IS I DON'T KNOW HOW TO CREATE SOCKET AND CONNECT WITH SERVER.I HAVE SEARCH HOW TO CREATE AND CONNECT WITH SOCKET.I GET THE IDEA FROM WEBSITES AND YOUTUBE VIDEOS.
+							2). THE SECOND CHALENGE IS TO HOW TO USE THE COMMAND LINE ARGUMENTS IN PYTHON.DR. RAM RUSTAGI SIR HELPED ME IN THAT AREA HOW TO USE THE COMMAND LINE ARGUMENTS WITH -F,-D,-I,-S.
+							3). MY LAST CHALENGE IS HOW TO SEND MULTIPLE MAIL RECIPENT .I TRIED MANY TIMES BUT I AM GETTING ONLY ERRORS AT LAST I GOT THE SOLUTION FOR MY PROBLEMS.
+							
+							
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+											
+RESULTS DETAILS :-
+	
+
+shadowavip@shadowavip-VirtualBox:~$ python3 G02.py -f karthk@ksit.edu.in -d shadowavip@localhost,avinash@ksit.edu.in -i assignment.txt,body.txt -s 127.0.0.1
+
+Message after connection request: 220 shadowavip-VirtualBox ESMTP Postfix (Ubuntu)
+
+
+---------------------------------------------------------------
+
+Message after EHLO command: 250-shadowavip-VirtualBox
+250-PIPELINING
+250-SIZE 10240000
+250-VRFY
+250-ETRN
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-SMTPUTF8
+250 CHUNKING
+
+
+---------------------------------------------------------------
+
+Message after MAIL FROM command: 250 2.1.0 Ok
+
+
+---------------------------------------------------------------
+
+Message after RCPT TO command: 250 2.1.5 Ok
+
+
+
+Message after RCPT TO command: 250 2.1.5 Ok
+
+
+---------------------------------------------------------------
+After DATA command: 354 End data with <CR><LF>.<CR><LF>
+
+******************************************************************************
+
+
+subject : first try in python using command line argument.
+
+******************************************************************************
+
+
+hi,
+
+this is avinash prasad.
+
+i am fine and how are you?
+
+this is my cn assignment.
+
+Response after sending message body: 250 2.0.0 Ok: queued as 72C2A180B11
+
+---------------------------------------------------------------
+221 2.0.0 Bye
+
+---------------------------------------------------------------
+
+
+
+IF YOU TRY TO CHECK THE MAIL BOX THEN WE CAN SEE THER IS THE MAIL IN DROP BOX :-
+
+Return-Path: <karthk@ksit.edu.in>
+X-Original-To: shadowavip@localhost
+Delivered-To: shadowavip@localhost
+Received: from ksit.ac.in (localhost [127.0.0.1])
+	by shadowavip-VirtualBox (Postfix) with ESMTP id 72C2A180B11;
+	Sat, 14 Nov 2020 15:49:30 +0530 (IST)
+subject: first try in python using command line argument.
+Message-Id: <20201114101930.72C2A180B11@shadowavip-VirtualBox>
+Date: Sat, 14 Nov 2020 15:49:30 +0530 (IST)
+From: karthk@ksit.edu.in
+
+hi,
+this is avinash prasad.
+i am fine and how are you?
+this is my cn assignment.
+
+
+FROM THE ABOVE RESULT ALL THE ACKNOWLEDGMENT WE GET IS "250 2.0.0 OK",WE SEE THAT THE MAIL IS SENT SUCCSSESSFULLY.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+											THANK YOU
+
